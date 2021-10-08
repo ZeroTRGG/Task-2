@@ -52,8 +52,6 @@ def game():
         turns = 0
         while len(player1) > 0 and len(player2) > 0:
             turns = turns + 1
-            #print turns
-            #print str(len(player1))+ " : " + str(len(player2))
             if (len(player1) + len(player2)) > 52:
                 print("Oh NO!")
                 sys.exit()
@@ -64,7 +62,6 @@ def game():
             player1.remove(player1[0])
             player2.remove(player2[0])
             if war[0].value > war[1].value:
-                #print "Player 1 wins the " + war[1].name
                 i = 0
                 n = len(war)
                 while i < n:
@@ -73,7 +70,6 @@ def game():
                     i = i + 1
 
             elif war[0].value < war[1].value:
-                #print "Player 2 wins the " + war[0].name
                 i = 0
                 n = len(war)
                 while i < n:
@@ -93,7 +89,6 @@ def game():
                     if player1[0].value == player2[0].value:
                         player2[0].value = 0
                 while len(war) > 0:
-                    #print "The cards have tied, war will commence"
 
                     i = 0
                     for i in range(3):
@@ -128,7 +123,6 @@ def game():
                             war.remove(war[0])
                             i = i + 1
 
-        #print turns
         if len(player1) != 0:
             print("Player1 wins!")
             pl1wins = pl1wins + 1
